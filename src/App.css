@@ -1,0 +1,211 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html, #root {
+  height: 100%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* App Layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  color: white;
+  padding: 15px 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.navbar .nav-links a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.navbar .nav-links a:hover {
+  color: #ffde59;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* takes up full viewport minus navbar height */
+  background: linear-gradient(to right, #90e0ef, #00b4d8, #0077b6);
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+.hero button {
+  background: white;
+  color: #0077b6;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.hero button:hover {
+  background: #023e8a;
+  color: white;
+  transform: scale(1.05);
+}
+/* About */
+.about {
+  padding: 80px 20px;
+  text-align: center;
+  background: white;
+  flex: 1;
+}
+.about h2 {
+  color: #0077b6;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* Departments */
+.departments {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f1faff;
+}
+.departments h2 {
+  color: #0077b6;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.dept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+.dept-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.dept-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Doctors */
+.doctors {
+  padding: 60px 20px;
+  text-align: center;
+  background: white;
+}
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+.doctor-card {
+  background: #f1faff;
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+.doctor-card:hover {
+  transform: scale(1.05);
+}
+.doctor-card img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* Contact */
+.contact {
+  padding: 60px 20px;
+  background: #f1faff;
+  text-align: center;
+}
+.contact form {
+  background: white;
+  max-width: 400px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.contact input,
+.contact textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.contact button {
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.contact button:hover {
+  background: #023e8a;
+}
+
+/* Footer (Always at bottom) */
+.footer {
+  background: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
